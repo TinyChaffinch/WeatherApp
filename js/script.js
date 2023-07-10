@@ -36,8 +36,10 @@ search.addEventListener('click', () => {
       error404.style.display = 'none';
       error404.classList.remove('fadeIn');
 
+      const coord = document.querySelector('.coord');
       const image = document.querySelector('.weather-box img');
       const tempеrature = document.querySelector('.weather-box .temperature');
+      const tempFeels = document.querySelector('.weather-box .tempFeels');
       const description = document.querySelector('.weather-box .description');
       const humidity = document.querySelector('.weather-details .humidity span');
       const wind = document.querySelector('.weather-details .wind span');
@@ -62,7 +64,9 @@ search.addEventListener('click', () => {
           image.src = '';
       }
 
+      coord.innerHTML = `Д: ${json.coord.lon} Ш: ${json.coord.lat}`;
       tempеrature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
+      tempFeels.innerHTML = `Ощущается как ${parseInt(json.main.feels_like)}<span>°C</span>`;
       description.innerHTML = `${json.weather[0].description}`;
       humidity.innerHTML = `${json.main.humidity}%`;
       wind.innerHTML = `${parseInt(json.wind.speed)}км/ч`;
