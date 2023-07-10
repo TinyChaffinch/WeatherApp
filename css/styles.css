@@ -338,3 +338,14 @@ body {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 350px) {
+
+  .weather-details .humidity {
+    padding-left: 0px;
+  }
+
+  .weather-details .wind {
+    padding-right: 0px;
+  }
+}
