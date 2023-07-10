@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>WeatherApp</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="search-box">
+      <i class="fa-solid fa-location-dot"></i>
+      <input id="countryName" type="text" placeholder="Введите страну или город" autofocus>
+      <button id="searchBtn" class="fa-solid fa-magnifying-glass"></button>
+    </div>
+
+    <div class="not-found">
+      <img src="./img/404.png" alt="Page not found">
+      <p>Вы ввели некорректный адрес</p>
+    </div>
+
+    <div class="weather-box">
+      <img src="">
+      <p class="temperature"></p>
+      <p class="description"></p>
+    </div>
+
+    <div class="weather-details">
+      <div class="humidity">
+        <i class="fa-solid fa-water"></i>
+        <div class="text">
+          <span></span>
+          <p>Влажность</p>
+        </div>
+      </div>
+
+      <div class="wind">
+        <i class="fa-solid fa-wind"></i>
+        <div class="text">
+          <span></span>
+          <p>Скорость ветра</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a5596370cb.js" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
